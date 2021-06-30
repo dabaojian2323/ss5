@@ -5,7 +5,7 @@ con2="permit  u  0.0.0.0/0  -   0.0.0.0/0   -    -   -  -   -"
 cd /
 mkdir ss5  &> /dev/null
 cd ss5     &> /dev/null
-wget https://github.com/dabaojian2323/ss5/blob/main/ss5-3.8.9-8.tar.gz
+wget "https://github.com/dabaojian2323/ss5/blob/main/ss5-3.8.9-8.tar.gz\n"
 yum -y install pam-devel openldap-devel openssl-devel &>  /dev/null
 tar -zxvf ss5-3.8.9-8.tar.gz   &> /dev/null
 cd ss5-3.8.9     &> /dev/null
