@@ -5,7 +5,7 @@ con2="permit  u  0.0.0.0/0  -   0.0.0.0/0   -    -   -  -   -"
 cd /
 mkdir ss5  &> /dev/null
 cd ss5     &> /dev/null
-wget "https://github.com/dabaojian2323/ss5/blob/main/ss5-3.8.9-8.tar.gz\n"
+wget https://nchc.dl.sourceforge.net/project/ss5/ss5/3.8.9-8/ss5-3.8.9-8.tar.gz
 yum -y install pam-devel openldap-devel openssl-devel &>  /dev/null
 tar -zxvf ss5-3.8.9-8.tar.gz   &> /dev/null
 cd ss5-3.8.9     &> /dev/null
@@ -13,8 +13,8 @@ yum -y install gcc  &> /dev/null
 ./configure  &> /dev/null
 make && make install  &> /dev/null
 #配置用户验证
-sed -i "87\c${con1}" /etc/opt/ss5/ss5.conf 
-sed -i "203\c${con2}" /etc/opt/ss5/ss5.conf
+sed -i "87c${con1}" /etc/opt/ss5/ss5.conf 
+sed -i "203c${con2}" /etc/opt/ss5/ss5.conf
 #vi /etc/opt/ss5/ss5.conf
 #vi /etc/opt/ss5/ss5.passwd
 read -p "请输入ss5账户: " username
