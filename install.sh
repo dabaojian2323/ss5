@@ -9,8 +9,9 @@ yum -y install gcc  &> /dev/null
 ./configure  &> /dev/null
 make && make install  &> /dev/null
 #配置用户验证
-sed -i "87c${con1}" /etc/opt/ss5/ss5.conf
-sed -i "203c${con2}" /etc/opt/ss5/ss5.conf
+echo "install success and config now"
+sed -i "87c$con1" /etc/opt/ss5/ss5.conf
+sed -i "203c$con2" /etc/opt/ss5/ss5.conf
 #vi /etc/opt/ss5/ss5.conf
 #vi /etc/opt/ss5/ss5.passwd
 read -p "请输入ss5账户: " username
